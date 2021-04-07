@@ -1,0 +1,38 @@
+02/13/2021 17:04:13 PM: Logfile Created
+02/13/2021 17:04:13 PM: minime05/uao/2013/20131001\UAO_L_20131002_000600_001.img center: 254.15, 254.70
+02/13/2021 17:04:13 PM: minime05/uao/2013/20131001\UAO_L_20131002_022308_016.img center: 254.19, 254.76
+02/13/2021 17:04:14 PM: minime05/uao/2013/20131001\UAO_L_20131002_065021_046.img center: 254.25, 254.76
+02/13/2021 17:04:14 PM: minime05/uao/2013/20131001\UAO_L_20131002_090608_061.img center: 254.23, 254.73
+02/13/2021 17:04:14 PM: WARNING: Very few (4) laser images for center trending. Consider using Zenith reference. <BADLASER>
+02/13/2021 17:04:17 PM: minime05/uao/2013/20131001\UAO_L_20131002_000600_001.img reduced chisqr: 70.7887
+02/13/2021 17:04:20 PM: minime05/uao/2013/20131001\UAO_L_20131002_022308_016.img reduced chisqr: 11.5470
+02/13/2021 17:04:23 PM: minime05/uao/2013/20131001\UAO_L_20131002_065021_046.img reduced chisqr: 31.0320
+02/13/2021 17:04:25 PM: minime05/uao/2013/20131001\UAO_L_20131002_090608_061.img reduced chisqr: 13.7088
+02/13/2021 17:04:29 PM: minime05/uao/2013/20131001\UAO_X_20131002_002816_010.img reduced chisqr: 6.8165.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:33 PM: minime05/uao/2013/20131001\UAO_X_20131002_005811_030.img reduced chisqr: 5.9505.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:37 PM: minime05/uao/2013/20131001\UAO_X_20131002_013155_050.img reduced chisqr: 5.3900.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:41 PM: minime05/uao/2013/20131001\UAO_X_20131002_030221_090.img reduced chisqr: 4.9348.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:45 PM: minime05/uao/2013/20131001\UAO_X_20131002_045620_140.img reduced chisqr: 6.2762.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:49 PM: minime05/uao/2013/20131001\UAO_X_20131002_084446_290.img reduced chisqr: 4.2230.
+			Message:"Tolerance seems to be too small."
+02/13/2021 17:04:49 PM: Created diagnostic plots.
+02/13/2021 17:04:49 PM: Laser and sky image analysis complete.
+02/13/2021 17:04:49 PM: No Boltwood cloud sensor data found.
+02/13/2021 17:04:49 PM: No X300 temperature sensor data found.
+02/13/2021 17:04:49 PM:  Quality Flag Calculation:
+		Manual Wind Flag: 0
+		Manual Temperature Flag: 1
+		Laser Drift: False
+		Sample-specific flags:
+		20131001\UAO_X_20131002_002816_010.img [no cloud data W1T1] [FINAL: W1T1]
+		20131001\UAO_X_20131002_005811_030.img [no cloud data W1T1] [FINAL: W1T1]
+		20131001\UAO_X_20131002_013155_050.img [no cloud data W1T1] [FINAL: W1T1]
+		20131001\UAO_X_20131002_030221_090.img [no cloud data W1T1] [FINAL: W1T1]
+		20131001\UAO_X_20131002_045620_140.img [no cloud data W1T1] [FINAL: W1T1]
+		20131001\UAO_X_20131002_084446_290.img [no cloud data W1T1] [FINAL: W1T1]
+02/13/2021 17:04:49 PM: Results saved to results/minime05_uao_20131001.npz
