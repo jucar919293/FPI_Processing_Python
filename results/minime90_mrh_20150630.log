@@ -1,0 +1,272 @@
+04/08/2021 04:31:32 AM: Logfile Created
+04/08/2021 04:31:32 AM: Sun up during minime90/mrh/2015/20150630/Images\MRH_L_20150630_231630_001.img. Ignoring this image...
+04/08/2021 04:31:33 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150630_235259_002.img center: 256.40, 254.56
+04/08/2021 04:31:33 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_002517_003.img center: 256.43, 254.60
+04/08/2021 04:31:33 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_005736_004.img center: 256.45, 254.57
+04/08/2021 04:31:33 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_012954_005.img center: 256.47, 254.60
+04/08/2021 04:31:34 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_020213_006.img center: 256.42, 254.61
+04/08/2021 04:31:34 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_023432_007.img center: 256.50, 254.64
+04/08/2021 04:31:34 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_030651_008.img center: 256.50, 254.63
+04/08/2021 04:31:34 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_033910_009.img center: 256.44, 254.63
+04/08/2021 04:31:35 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_041129_010.img center: 256.55, 254.64
+04/08/2021 04:31:35 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_044348_011.img center: 256.47, 254.64
+04/08/2021 04:31:38 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150630_235259_002.img reduced chisqr: 4.1384
+04/08/2021 04:31:41 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_002517_003.img reduced chisqr: 5.8986
+04/08/2021 04:31:43 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_005736_004.img reduced chisqr: 4.2793
+04/08/2021 04:31:46 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_012954_005.img reduced chisqr: 3.6629
+04/08/2021 04:31:49 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_020213_006.img reduced chisqr: 4.4998
+04/08/2021 04:31:52 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_023432_007.img reduced chisqr: 4.4912
+04/08/2021 04:31:55 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_030651_008.img reduced chisqr: 3.8658
+04/08/2021 04:31:57 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_033910_009.img reduced chisqr: 3.8564
+04/08/2021 04:32:00 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_041129_010.img reduced chisqr: 4.3789
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_L_20150701_044348_011.img reduced chisqr: 3.6156
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_232431_001.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_232742_002.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_233051_003.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_233401_004.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_233710_005.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_234019_006.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_234327_007.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_234636_008.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_234944_009.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_000000_012.img is looking too close to the moon (11.3 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_002909_021.img is looking too close to the moon (34.4 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_003219_022.img is looking too close to the moon (3.9 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_010128_031.img is looking too close to the moon (30.2 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_010438_032.img is looking too close to the moon (3.9 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_013347_041.img is looking too close to the moon (27.1 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_013656_042.img is looking too close to the moon (11.3 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_020605_051.img is looking too close to the moon (25.2 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_020915_052.img is looking too close to the moon (18.8 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_021224_053.img is looking too close to the moon (30.8 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_023824_061.img is looking too close to the moon (25.1 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_024133_062.img is looking too close to the moon (26.2 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_024443_063.img is looking too close to the moon (23.5 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_031043_071.img is looking too close to the moon (26.7 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_031353_072.img is looking too close to the moon (33.7 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_031702_073.img is looking too close to the moon (16.3 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_034302_081.img is looking too close to the moon (29.8 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_034921_083.img is looking too close to the moon (9.8 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_041521_091.img is looking too close to the moon (33.9 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_042140_093.img is looking too close to the moon (6.6 deg). Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_044429_100.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_044740_101.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_045050_102.img not bounded by laser images. Ignoring this image...
+04/08/2021 04:32:10 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_235340_010.img reduced chisqr: 1.3435.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:16 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150630_235651_011.img reduced chisqr: 1.3873.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:23 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_000310_013.img reduced chisqr: 1.3120.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:29 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_000619_014.img reduced chisqr: 1.3619.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:38 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_000928_015.img reduced chisqr: 1.2059.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:44 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_001238_016.img reduced chisqr: 1.1628.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:51 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_001546_017.img reduced chisqr: 0.9630.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:32:58 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_001854_018.img reduced chisqr: 1.5691.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:04 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_002202_019.img reduced chisqr: 1.2677.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:11 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_002558_020.img reduced chisqr: 1.4210.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:17 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_003528_023.img reduced chisqr: 1.2542.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:24 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_003838_024.img reduced chisqr: 1.2897.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:30 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_004147_025.img reduced chisqr: 1.1851.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:37 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_004456_026.img reduced chisqr: 1.1222.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:43 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_004804_027.img reduced chisqr: 1.3191.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:50 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_005112_028.img reduced chisqr: 1.2178.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:33:56 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_005420_029.img reduced chisqr: 1.1157.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:03 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_005817_030.img reduced chisqr: 1.5510.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:09 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_010747_033.img reduced chisqr: 1.3665.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:16 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_011056_034.img reduced chisqr: 1.3352.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:22 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_011406_035.img reduced chisqr: 1.3247.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:29 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_011715_036.img reduced chisqr: 1.0971.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:35 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_012023_037.img reduced chisqr: 0.9735.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:42 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_012331_038.img reduced chisqr: 1.0589.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:49 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_012639_039.img reduced chisqr: 1.2074.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:34:55 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_013035_040.img reduced chisqr: 1.4615.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:02 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_014005_043.img reduced chisqr: 1.5886.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:08 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_014315_044.img reduced chisqr: 1.3621.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:15 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_014624_045.img reduced chisqr: 1.1815.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:21 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_014934_046.img reduced chisqr: 1.1074.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:28 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_015242_047.img reduced chisqr: 1.1486.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:34 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_015550_048.img reduced chisqr: 1.1797.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:41 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_015858_049.img reduced chisqr: 1.2535.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:47 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_020254_050.img reduced chisqr: 1.5526.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:35:54 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_021534_054.img reduced chisqr: 1.2018.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:00 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_021843_055.img reduced chisqr: 1.3384.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:06 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_022152_056.img reduced chisqr: 1.2156.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:13 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_022500_057.img reduced chisqr: 1.2395.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:19 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_022808_058.img reduced chisqr: 1.3366.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:26 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_023116_059.img reduced chisqr: 1.2613.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:33 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_023513_060.img reduced chisqr: 1.5765.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:39 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_024753_064.img reduced chisqr: 1.3983.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:46 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_025102_065.img reduced chisqr: 1.2215.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:52 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_025411_066.img reduced chisqr: 1.2199.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:36:59 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_025719_067.img reduced chisqr: 1.3451.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:05 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_030028_068.img reduced chisqr: 1.2491.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:12 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_030336_069.img reduced chisqr: 1.1944.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:18 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_032012_074.img reduced chisqr: 1.4231.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:25 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_032321_075.img reduced chisqr: 1.2518.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:31 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_032630_076.img reduced chisqr: 1.1586.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:38 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_032938_077.img reduced chisqr: 1.3435.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:44 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_033246_078.img reduced chisqr: 1.2955.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:51 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_033555_079.img reduced chisqr: 1.3914.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:37:57 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_033951_080.img reduced chisqr: 1.6595.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:04 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_034612_082.img reduced chisqr: 1.2605.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:10 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_035231_084.img reduced chisqr: 1.4689.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:17 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_035540_085.img reduced chisqr: 1.5019.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:24 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_035849_086.img reduced chisqr: 1.3590.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:30 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_040157_087.img reduced chisqr: 1.4566.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:36 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_040505_088.img reduced chisqr: 1.5633.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:43 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_040813_089.img reduced chisqr: 1.4162.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:49 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_041210_090.img reduced chisqr: 1.5982.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:38:56 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_041831_092.img reduced chisqr: 1.4753.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:02 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_042450_094.img reduced chisqr: 1.6575.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:09 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_042759_095.img reduced chisqr: 1.6674.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:16 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_043108_096.img reduced chisqr: 1.5277.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:22 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_043416_097.img reduced chisqr: 1.5267.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:29 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_043724_098.img reduced chisqr: 1.6273.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:35 AM: minime90/mrh/2015/20150630/Images\MRH_X_20150701_044033_099.img reduced chisqr: 1.3659.
+			Message:"Tolerance seems to be too small."
+04/08/2021 04:39:35 AM: WARNING: Exposure time is not changing.
+04/08/2021 04:39:36 AM: Created diagnostic plots.
+04/08/2021 04:39:36 AM: Laser and sky image analysis complete.
+04/08/2021 04:39:36 AM: No Boltwood cloud sensor data found.
+04/08/2021 04:39:36 AM: No X300 temperature sensor data found.
+04/08/2021 04:39:36 AM:  Quality Flag Calculation:
+		Manual Wind Flag: 0
+		Manual Temperature Flag: 0
+		Laser Drift: False
+		Sample-specific flags:
+		Images\MRH_X_20150630_235340_010.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150630_235651_011.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_000310_013.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_000619_014.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_000928_015.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_001238_016.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_001546_017.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_001854_018.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_002202_019.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_002558_020.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_003528_023.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_003838_024.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_004147_025.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_004456_026.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_004804_027.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_005112_028.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_005420_029.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_005817_030.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_010747_033.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_011056_034.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_011406_035.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_011715_036.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_012023_037.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_012331_038.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_012639_039.img [no cloud data W1T1] [sigma_T large: W2T2] [FINAL: W2T2]
+		Images\MRH_X_20150701_013035_040.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_014005_043.img [no cloud data W1T1] [sigma_T large: W2T2] [FINAL: W2T2]
+		Images\MRH_X_20150701_014315_044.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_014624_045.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_014934_046.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_015242_047.img [no cloud data W1T1] [sigma_T large: W2T2] [FINAL: W2T2]
+		Images\MRH_X_20150701_015550_048.img [no cloud data W1T1] [sigma_T large: W2T2] [FINAL: W2T2]
+		Images\MRH_X_20150701_015858_049.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_020254_050.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_021534_054.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_021843_055.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_022152_056.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_022500_057.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_022808_058.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_023116_059.img [no cloud data W1T1] [sigma_T large: W2T2] [FINAL: W2T2]
+		Images\MRH_X_20150701_023513_060.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_024753_064.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_025102_065.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_025411_066.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_025719_067.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_030028_068.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_030336_069.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_032012_074.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_032321_075.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_032630_076.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_032938_077.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_033246_078.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_033555_079.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_033951_080.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_034612_082.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_035231_084.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_035540_085.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_035849_086.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_040157_087.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_040505_088.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_040813_089.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_041210_090.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_041831_092.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_042450_094.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_042759_095.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_043108_096.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_043416_097.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_043724_098.img [no cloud data W1T1] [FINAL: W1T1]
+		Images\MRH_X_20150701_044033_099.img [no cloud data W1T1] [FINAL: W1T1]
+04/08/2021 04:39:36 AM: Results saved to results/minime90_mrh_20150630.npz
