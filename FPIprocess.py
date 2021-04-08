@@ -394,7 +394,7 @@ def process_instr(instr_name ,year, doy, reference='laser', use_npz = False,
     # Open a logfile
     logname = results_stub + instrsitedate + '.log'
     if use_npz: # append to the previous log file
-        logfile = open(logname,'a') # overwrite previous log
+        logfile = open(logname, 'a')  # overwrite previous log
         logfile.write('\n' + datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S %p: ') + 'Rerunning processing to obtain new cloud and temperature data, and updating plots.\n')
     else: # create a new log file
         logfile = open(logname,'w') # overwrite previous log
