@@ -307,7 +307,7 @@ def process_instr(instr_name ,year, doy, reference='laser', use_npz = False,
     ccd_temp_thresh = -60. # sky exposures with a CCD temp above this will get a quality flag.
 
     # Information about sending data to the website. Only used if send_to_website==True.
-    temp_plots_stub= '/rdata/airglow/fpi/results/temporary_plots/' #where to save png files
+    temp_plots_stub= '/results/Images/' #where to save png files
     scp_user       = 'airglowgroup@webhost.engr.illinois.edu'
     db_image_stub  =        'SummaryImages/' # relative path from web server directory on airglow
     db_log_stub =           'SummaryLogs/'

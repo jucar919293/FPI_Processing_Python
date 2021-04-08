@@ -1,23 +1,29 @@
 import FPIprocess
 
-# Specify which instrument and which date to process
-instr_name = 'minime05'
-year = 2013
-doy =        273
-#year =       2015        
-#doy =        166
+# Specify which instrument and which date to process 152 181
+instr_name = 'minime90'
+# year = 2013
+# doy = 273
+year = 2015
+doy = 181
 
 # Specify where the data are located and where results should be saved
-fpi_dir =          ''
-results_stub =     'results/'
-bw_dir =           ''
-x300_dir =         ''
-
+fpi_dir = ''
+results_stub = 'results/'
+bw_dir = ''
+x300_dir = ''
 # # Make the call to the processing function
-msg = FPIprocess.process_instr(instr_name, year, doy, fpi_dir=fpi_dir,
-          bw_dir=bw_dir, x300_dir=x300_dir, results_stub=results_stub,
-          send_to_website=False, enable_share=False,
-          send_to_madrigal=False, enable_windfield_estimate=False)
+
+for doy in range(152, 182):
+    try:
+        msg = FPIprocess.process_instr(instr_name, year, doy, fpi_dir=fpi_dir,
+                  bw_dir=bw_dir, x300_dir=x300_dir, results_stub=results_stub,
+                  send_to_website=False, enable_share=False,
+                  send_to_madrigal=False, enable_windfield_estimate=False)
+
+    except:
+        print('error')
+        print (doy)
 
 # if msg: # if a warning was issued, print it
 # 	print msg

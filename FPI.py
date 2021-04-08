@@ -803,7 +803,7 @@ def ParameterFit(instrument, site, laser_fns, sky_fns, direc_tol = 10.0, N=500, 
             img = np.asarray(d)
             (cx,cy) = FindCenter(img)
 
-            appx_I = np.percentile(img,98) - np.percentile(img,5)  # era 95
+            appx_I = np.percentile(img,100) - np.percentile(img,80)  # era 98 y 95
             if appx_I < LAS_I_THRESH:
                 logfile.write(datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S %p: ') + \
                                 '%s laser fringes too dim (%.1f < %.1f). Ignoring this image...\n' % (fname, appx_I, LAS_I_THRESH))
