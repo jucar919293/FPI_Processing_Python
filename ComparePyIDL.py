@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import math
 
-year = 2021
-month = 4
-days = [i for i in range(1, 6)] + [n for n in range(7, 8)] + [n for n in range(9, 23) ]+ [n for n in range(25, 27)]
+year = 2015
+month = 6
+days = [i for i in range(1, 7)] + [n for n in range(9, 31)]
 modes = ['CV_MRH_NZK_2', 'IN_MRH_NZK', 'Zenith', 'Aux2', 'West', 'Aux3']
 
 
@@ -74,17 +74,19 @@ if __name__ == '__main__':
         dframePy = pd.DataFrame.from_dict(dPy)
         dframePy = preprocess_data_Py(dframePy)
         dframePy = dframePy[labels]
+        pathIDL = "Data2plot/2015/" + get_dateformat(year, month, day, "%Y%m%d") + ".csv"
+        dframeIDL = pd.read_csv(pathIDL)
+        dframeIDL = preprocess_data_IDL(dframeIDL)
+        dframeIDL = dframeIDL[labels]
         for time_stamp in dframePy['times']:
+            pointIDL = dframeIDL[(dframeIDL['times'] == time_stamp)]
             pointPy = dframePy[(dframePy['times'] == time_stamp)]
-            ax.set_ylim(0, 1200)
-            if not pointPy.empty:
-                ax.scatter(time_stamp, pointPy['temps'], s=5, c='blue')
+            ax.set_ylim(-125, 125)
+            ax.set_xlim(-125, 125)
+            if not pointIDL.empty and not pointPy.empty:
+                ax.scatter(pointPy['winds'], pointIDL['winds'], s=5, c='blue')
             print(time_stamp)
-    ax.set_ylabel('Temps April - 2021')
+    ax.set_ylabel('IDL Winds - 2015')
+    ax.set_xlabel('Python Winds - 2015')
     ax.grid(True)
     plt.show()
-
-
-
-
-

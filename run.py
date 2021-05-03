@@ -4,8 +4,8 @@ import FPIprocess
 instr_name = 'minime90'
 # year = 2013
 # doy = 273
-year = 2015
-doy = 181
+year = 2021
+doy = 1
 
 # Specify where the data are located and where results should be saved
 fpi_dir = ''
@@ -14,7 +14,7 @@ bw_dir = ''
 x300_dir = ''
 # # Make the call to the processing function
 
-for doy in range(152, 182):
+for doy in range(90, 180):
     try:
         msg = FPIprocess.process_instr(instr_name, year, doy, fpi_dir=fpi_dir,
                   bw_dir=bw_dir, x300_dir=x300_dir, results_stub=results_stub,

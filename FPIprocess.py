@@ -361,10 +361,12 @@ def process_instr(instr_name ,year, doy, reference='laser', use_npz = False,
             yearstr = dir_dt.strftime('%Y')
             datestr = dir_dt.strftime('%Y%m%d')
             # Create the directory name for the data to be processed
-            data_dir = data_stub + yearstr + '/' + datestr + '/Images/'
+#           data_dir = data_stub + yearstr + '/' + datestr + '/Images/'
+            data_dir = data_stub + yearstr + '/' + datestr + '/'
             # Look in the data directory, and grab the files if they were
             # taken between the start and stop times.
             # First, lasers:
+            print(data_dir)
             fns_all = get_all_laser_images(data_dir)
             print(fns_all)
             for fn in fns_all:
@@ -399,7 +401,6 @@ def process_instr(instr_name ,year, doy, reference='laser', use_npz = False,
     else: # create a new log file
         logfile = open(logname,'w') # overwrite previous log
         logfile.write(datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S %p: ') + 'Logfile Created\n')
-
 
     if not laser_fns and sky_fns and reference=='laser': # This is not a big deal if reference=='zenith'
         logfile.write(datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S %p: ') + 'No %s laser data found between %s and %s. Sky data found. <BADLASER> \n' % (instr_name, str(start_dt), str(stop_dt)))
