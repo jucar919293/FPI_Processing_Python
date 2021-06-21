@@ -6,7 +6,6 @@ import math
 import os
 
 """
-https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015JA021025
 'Zenith': {'ze': 0, 'az': 0, 'exptime': 210,
     'n_exp': 0, 'last_exp': None, 'delay':1500,},
 'North': {'ze': 45, 'az': 0, 'exptime': 210,
@@ -91,46 +90,34 @@ def plot_month_data_(result_path, mode):
     labels = ['temps', 'winds', 'times', 'directions']
     fig, ax = plt.subplots()
     ax.set_ylim((0, 1300))
+    day = 5
+
+    pathPy = "results/minime90_mrh_" + get_dateformat(year, month, day, "%Y%m%d") + ".npz"
+    timesPy, windsPy, tempsPy, directionPy = open_npz(pathPy)
+    # Creating dataframe of Py
+    dPy = {'times': timesPy, 'winds': windsPy, 'temps': tempsPy, 'directions': directionPy}
+    dframePy = pd.DataFrame.from_dict(dPy)
+    dframePy = preprocess_data_Py(dframePy)
+    dframePy = dframePy[labels]
+    dframePy = dframePy[dframePy['temps'] > 10]
     directions = ['North', 'East', 'South', 'West', 'Zenith']
-    temps_avg = []
-    winds_avg = []
-    winds_std = []
-    temps_std = []
-    times = [datetime(year, month, day) for day in dates_available]
+    if first:
+        first_time = dframePy['times'][0]
+        first = False
     for direction in directions:
-        for day in dates_available:
-            global day
-            pathPy = "results/minime90_mrh_" + get_dateformat(year, month, day, "%Y%m%d") + ".npz"
-            timesPy, windsPy, tempsPy, directionPy = open_npz(pathPy)
-            # Creating dataframe of Py
-            dPy = {'times': timesPy, 'winds': windsPy, 'temps': tempsPy, 'directions': directionPy}
-            dframePy = pd.DataFrame.from_dict(dPy)
-            dframePy = preprocess_data_Py(dframePy)
-            dframePy = dframePy[labels]
-            dframePy = dframePy[dframePy['temps'] > 50]
-            dframePy_d = dframePy[dframePy['directions'] == direction]
-            # dframePy_d = dframePy
-            temps_mean = dframePy_d.mean()['temps']
-            winds_mean = dframePy_d.mean()['winds']
-            temps_avg.append(temps_mean)
-            winds_avg.append(winds_mean)
-            winds_std.append(dframePy_d.std()['winds']/1.5)
-            temps_std.append(dframePy_d.std()['temps']/1.5)
-        if mode == 'temps':
-            ax.errorbar(times, temps_avg, temps_std, fmt='-o')
-            ax.set_ylim(400, 900)
-        else:
-            winds_std[14] = winds_std[13] * 2
-            ax.errorbar(times, winds_avg, winds_std, fmt='-o')
-            ax.set_ylim(-200, 100)
-        winds_std = []
-        temps_std = []
-        temps_avg = []
-        winds_avg = []
-    ax.set_ylabel('Temperatures')
-    ax.set_title('Abril - 2021')
-    ax.grid(True)
+        dframePy_d = dframePy[dframePy['directions'] == direction]
+        ax.plot(dframePy_d['times'], dframePy_d[mode])
+
+    if mode == 'temps':
+        ax.set_ylim(-10, 900)
+    else:
+        ax.set_ylim(-160, 120)
+
+    last_time = dframePy['times'][-1:]
+    ax.set_xlim(first_time, last_time)
     ax.legend(directions)
+    ax.set_ylabel(mode + ' May - 2021')
+    ax.grid(True)
     plt.show()
 
 

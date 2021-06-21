@@ -6,7 +6,6 @@ import math
 import os
 
 """
-https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015JA021025
 'Zenith': {'ze': 0, 'az': 0, 'exptime': 210,
     'n_exp': 0, 'last_exp': None, 'delay':1500,},
 'North': {'ze': 45, 'az': 0, 'exptime': 210,
@@ -114,23 +113,74 @@ def plot_month_data_(result_path, mode):
             winds_mean = dframePy_d.mean()['winds']
             temps_avg.append(temps_mean)
             winds_avg.append(winds_mean)
-            winds_std.append(dframePy_d.std()['winds']/1.5)
-            temps_std.append(dframePy_d.std()['temps']/1.5)
-        if mode == 'temps':
-            ax.errorbar(times, temps_avg, temps_std, fmt='-o')
-            ax.set_ylim(400, 900)
-        else:
-            winds_std[14] = winds_std[13] * 2
-            ax.errorbar(times, winds_avg, winds_std, fmt='-o')
-            ax.set_ylim(-200, 100)
+            winds_std.append(dframePy_d.std()['winds']/2)
+            temps_std.append(dframePy_d.std()['temps']/2)
+        winds_std[14] = winds_std[13]
+
+        if direction == 'North':
+            norte_temp = temps_avg
+            norte_wind = winds_avg
+            norte_temp_std = temps_std
+            norte_winds_std = winds_std
+
+        if direction == 'East':
+            este_temp = temps_avg
+            este_wind = winds_avg
+            este_temp_std = temps_std
+            este_winds_std = winds_std
+
+        if direction == 'South':
+            sur_temp = temps_avg
+            sur_wind = winds_avg
+            sur_temp_std = temps_std
+            sur_winds_std = winds_std
+
+        if direction == 'West':
+            oeste_temp = temps_avg
+            oeste_wind = winds_avg
+            oeste_temp_std = temps_std
+            oeste_winds_std = winds_std
+
+        if direction == 'Zenith':
+            zenith_temp = temps_avg
+            zenith_wind = winds_avg
+            zenith_temp_std = temps_std
+            zenith_winds_std = winds_std
+
         winds_std = []
         temps_std = []
         temps_avg = []
         winds_avg = []
-    ax.set_ylabel('Temperatures')
+
+    meridional = list((np.array(norte_wind) - np.array(sur_wind))/math.sqrt(2))
+    meridional_std = list((np.array(norte_winds_std) + np.array(sur_winds_std))/math.sqrt(2))
+
+    zonal = list((np.array(este_wind) - np.array(oeste_wind))/math.sqrt(2))
+    zonal_std = list((np.array(este_winds_std) + np.array(oeste_winds_std))/math.sqrt(2))
+
+    temp_final = list((np.array(zenith_temp)+np.array(norte_temp)+np.array(sur_temp)+np.array(este_temp)
+                       + np.array(oeste_temp))/5)
+
+    temp_final_std = list((np.array(zenith_temp_std)+np.array(norte_temp_std)+np.array(sur_temp_std)
+                           + np.array(este_temp_std) + np.array(oeste_temp_std))/5)
+
+    if mode == 'temps':
+        ax.errorbar(times, temp_final, temp_final_std, fmt='-o')
+        ax.set_ylim(550, 820)
+        ax.set_ylabel('Temperatures')
+
+    else:
+        ax.errorbar(times, zonal, zonal_std, fmt='-o')
+        ax.errorbar(times, meridional, meridional_std, fmt='-o')
+        ax.errorbar(times, zenith_wind, zenith_winds_std, fmt='-o')
+
+        ax.set_ylim(-150, 80)
+        ax.legend(['Zonal Winds', 'Meridional Winds', 'Vertical Winds'])
+        ax.set_ylabel('Winds (m/s)')
+
+
     ax.set_title('Abril - 2021')
     ax.grid(True)
-    ax.legend(directions)
     plt.show()
 
 
