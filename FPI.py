@@ -2231,7 +2231,7 @@ def DopplerReference(FPI_Results, reference='zenith', statistic='mode'):
                     e_ref_Dop = np.nan*all_h
         elif reference == 'laser':
                 # Find the zero offset
-                ind = all_indices('Zenith',FPI_Results['direction'])
+                ind = all_indices('Zenith', FPI_Results['direction'])
                 if len(ind)==0:
                     raise Exception('Cannot establish Doppler reference: No zenith samples')
                 

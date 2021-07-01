@@ -122,7 +122,7 @@ def plot_month_data_(result_path, mode):
         else:
             winds_std[14] = winds_std[13] * 2
             ax.errorbar(times, winds_avg, winds_std, fmt='-o')
-            ax.set_ylim(-200, 100)
+            ax.set_ylim(-60, 60)
         winds_std = []
         temps_std = []
         temps_avg = []

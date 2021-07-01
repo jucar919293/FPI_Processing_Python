@@ -17,7 +17,7 @@ import os
 'West': {'ze': -45, 'az': 90, 'exptime': 210,
 """
 year = 2021
-month = 4
+month = 6
 
 
 def convert_timesIDL(time):
@@ -152,10 +152,10 @@ def plot_month_data_(result_path, mode):
         temps_avg = []
         winds_avg = []
 
-    meridional = list((np.array(norte_wind) - np.array(sur_wind))/math.sqrt(2))
+    meridional = list((np.array(norte_wind) + np.array(sur_wind))/math.sqrt(2))
     meridional_std = list((np.array(norte_winds_std) + np.array(sur_winds_std))/math.sqrt(2))
 
-    zonal = list((np.array(este_wind) - np.array(oeste_wind))/math.sqrt(2))
+    zonal = list((np.array(este_wind) + np.array(oeste_wind))/math.sqrt(2))
     zonal_std = list((np.array(este_winds_std) + np.array(oeste_winds_std))/math.sqrt(2))
 
     temp_final = list((np.array(zenith_temp)+np.array(norte_temp)+np.array(sur_temp)+np.array(este_temp)
@@ -174,7 +174,7 @@ def plot_month_data_(result_path, mode):
         ax.errorbar(times, meridional, meridional_std, fmt='-o')
         ax.errorbar(times, zenith_wind, zenith_winds_std, fmt='-o')
 
-        ax.set_ylim(-150, 80)
+        ax.set_ylim(-150, 150)
         ax.legend(['Zonal Winds', 'Meridional Winds', 'Vertical Winds'])
         ax.set_ylabel('Winds (m/s)')
 

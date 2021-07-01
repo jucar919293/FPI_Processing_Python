@@ -183,13 +183,13 @@ def plot_month_data_(result_path, mode):
     if mode == 'temps':
         ax.errorbar(times_min[:-2], temp_final[:-1], temp_final_std[:-1],
                     fmt='--ko', elinewidth=0.5, capthick=1, capsize=4)
-        ax.set_ylim(400, 800)
+        ax.set_ylim(500, 780)
         ax.set_ylabel('Temperaturas (K)', fontsize=18)
 
     else:
-        ax.errorbar(times_min[:-2], zonal[:-1], zonal_std[:-1],
+        ax.errorbar(times_min[:-2], este_mean[:-1], este_mean[:-1],
                     fmt='--ro', elinewidth=0.5, capthick=1, capsize=4)
-        ax.errorbar(times_min[:-2], meridional[:-1], meridional_std[:-1],
+        ax.errorbar(times_min[:-2], norte_mean[:-1], norte_mean[:-1],
                     fmt='--ko', elinewidth=0.5, capthick=1, capsize=4)
         # ax.errorbar(times_min[:-2], zenith_wind[:-1], zenith_winds_std[:-1], fmt='-o')
 

@@ -1,5 +1,5 @@
 import FPIprocess
-
+import  FPIDisplay
 # Specify which instrument and which date to process 152 181
 instr_name = 'minime90'
 # year = 2013
@@ -14,7 +14,7 @@ bw_dir = ''
 x300_dir = ''
 # # Make the call to the processing function
 
-for doy in range(135, 180):
+for doy in range(150, 180):
     try:
         msg = FPIprocess.process_instr(instr_name, year, doy, fpi_dir=fpi_dir,
                   bw_dir=bw_dir, x300_dir=x300_dir, results_stub=results_stub,

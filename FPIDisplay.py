@@ -80,7 +80,7 @@ def MonthlySummary(site_name, year, month):
     
     center_time, (bin_T, bin_eT), (bin_U, bin_eU), (bin_U2, bin_eU2), (bin_V, bin_eV), (bin_V2, bin_eV2) = FPI.average_data(f, bins=bins)
 
-    rcParams['figure.figsize']= 8.5,11
+    rcParams['figure.figsize']= 8.5, 11
 
     # The start date
 #    base = sitetz.localize(datetime.datetime(2014,month,1))
@@ -1079,7 +1079,7 @@ def PlotDay(f, full_clear=-30, full_cloud=-20,
         Doppler_Fig = plt.figure()
         Doppler_Graph = Doppler_Fig.add_subplot(111)
         
-    (ref_Dop, e_ref_Dop) = FPI.DopplerReference(FPI_Results,reference=reference)
+    (ref_Dop, e_ref_Dop) = FPI.DopplerReference(FPI_Results, reference=reference)
 
     # Calculate the vertical wind and interpolate it
     ind = FPI.all_indices('Zenith',FPI_Results['direction'])
@@ -1120,7 +1120,7 @@ def PlotDay(f, full_clear=-30, full_cloud=-20,
         l = directions
         
     for x in l:
-        ind = FPI.all_indices(x,FPI_Results['direction'])
+        ind = FPI.all_indices(x, FPI_Results['direction'])
         
         # Inital plot of bogus value to get the legend right
         Temperature_Graph.plot(-999,-999,color=fmt[x]['Color'], marker=fmt[x]['Marker'], label=x)
@@ -1144,7 +1144,12 @@ def PlotDay(f, full_clear=-30, full_cloud=-20,
         # Loop through each point (needed to be done this way to allow setting
         # the alpha value for each individual point)
         for (t,y,ey,z,ez,wq,tq) in zip(FPI_Results['sky_times'][ind], FPI_Results['T'][ind], FPI_Results['sigma_T'][ind],Doppler_Wind,Doppler_Error,FPI_Results['wind_quality_flag'][ind],FPI_Results['temp_quality_flag'][ind]):
-        
+
+            # t = FPI_Results['sky_times'][ind]
+            # y = FPI_Results['T'][ind]
+            # ey =  FPI_Results['sigma_T'][ind]
+            # z = Doppler_Wind
+            # ez = Doppler_Error
             # Calculate the alpha value to be used for this point, based on quality flag
             w_alpha_val = 1.
             t_alpha_val = 1.

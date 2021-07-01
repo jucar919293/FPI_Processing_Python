@@ -1,3 +1,6 @@
 .idea
 minime90/
 *.pdf
+results/
+Data2plot/
+.vscode/settings.json
