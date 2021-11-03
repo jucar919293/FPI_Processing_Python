@@ -1,32 +1,32 @@
-#!/bin/python
-import sys
-import os
 import FPIprocess
-import  FPIDisplay
-5
+import FPIDisplay
+from datetime import datetime
+
+
+def calc_doy(date):
+    year = int(date[0:4])
+    month = int(date[4:6])
+    day = int(date[6:8])
+    day_of_year = datetime(year, month, day).timetuple().tm_yday
+    return day_of_year
+
+
 def main(args):
-    do_something(args[0])
+    instr_name = args[0]
+    if args[1] == 'today':
+        year = datetime.now().year
+        doy = datetime.now().timetuple().tm_yday - 1
+    else:
+        year = int(args[1][0:4])
+        doy = calc_doy(args[1])
+    print(year)
+    print(doy)
+    fpi_dir = ''
+    results_stub = args[2]
+    bw_dir = ''
+    x300_dir = ''
+    print(results_stub)
 
-
-if __name__ == "__main__":
-    import sys
-    main(sys.argv[1:])
-
-# Specify which instrument and which date to process 152 181
-instr_name = 'minime90'
-# year = 2013
-# doy = 273
-year = 2021
-doy = 80
-
-# Specify where the data are located and where results should be saved
-fpi_dir = ''
-results_stub = 'results/'
-bw_dir = ''
-x300_dir = ''
-# # Make the call to the processing function
-
-for doy in range(200, 300):
     try:
         msg = FPIprocess.process_instr(instr_name, year, doy, fpi_dir=fpi_dir,
                   bw_dir=bw_dir, x300_dir=x300_dir, results_stub=results_stub,
@@ -36,14 +36,7 @@ for doy in range(200, 300):
         print('error')
         print (doy)
 
-# if msg: # if a warning was issued, print it
-# 	print msg
 
-# Plot the wind and the temperature using the npz file that was generated above.
-# import FPIDisplay
-
-# ((temp_fig,_), (wind_fig,_)) = FPIDisplay.PlotDay('%sminime05_uao_20131001.npz' % results_stub)
-
-# # Save the figures to the results folder
-# wind_fig.savefig('%s%s_%i_%03i_winds.png' % (results_stub, instr_name, year, doy))
-# temp_fig.savefig('%s%s_%i_%03i_temps.png' % (results_stub, instr_name, year, doy))
+if __name__ == "__main__":
+    import sys
+    main(sys.argv[1:])
