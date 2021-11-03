@@ -17,7 +17,7 @@ import os
 'West': {'ze': -45, 'az': 90, 'exptime': 210,
 """
 year = 2021
-month = 4
+month = 6
 
 
 def convert_timesIDL(time):
@@ -90,9 +90,10 @@ def plot_month_data_(result_path, mode):
     labels = ['temps', 'winds', 'times', 'directions']
     fig, ax = plt.subplots()
     ax.set_ylim((0, 1300))
-    day = 5
+    day = 23
 
     pathPy = "results/minime90_mrh_" + get_dateformat(year, month, day, "%Y%m%d") + ".npz"
+    print(pathPy)
     timesPy, windsPy, tempsPy, directionPy = open_npz(pathPy)
     # Creating dataframe of Py
     dPy = {'times': timesPy, 'winds': windsPy, 'temps': tempsPy, 'directions': directionPy}
@@ -116,7 +117,7 @@ def plot_month_data_(result_path, mode):
     last_time = dframePy['times'][-1:]
     ax.set_xlim(first_time, last_time)
     ax.legend(directions)
-    ax.set_ylabel(mode + ' May - 2021')
+    ax.set_ylabel(mode + ' Jun - 2021')
     ax.grid(True)
     plt.show()
 

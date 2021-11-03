@@ -320,7 +320,7 @@ def process_instr(instr_name ,year, doy, reference='laser', use_npz = False,
 
     notify_the_humans = False # default
 
-    nominal_dt = datetime.datetime(year,1,1) + datetime.timedelta(days = doy-1)
+    nominal_dt = datetime.datetime(year, 1, 1) + datetime.timedelta(days = doy-1)
 
     # Import the site information
     site_name = fpiinfo.get_site_of(instr_name, nominal_dt)

@@ -127,6 +127,7 @@ def plot_month_data_(result_path, mode):
             dPy = {'times': timesPy, 'winds': windsPy, 'temps': tempsPy, 'directions': directionPy}
             dframePy = pd.DataFrame.from_dict(dPy)
             dframePy = preprocess_data_Py(dframePy)
+
             dframePy = dframePy[labels]
             dframePy = dframePy[dframePy['temps'] > 50]
             dframePy_d = dframePy[dframePy['directions'] == direction]
@@ -199,6 +200,7 @@ def plot_month_data_(result_path, mode):
     ax.set_xlabel('Hora local', fontsize=18)
     ax.set_xticklabels([19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5], fontsize=15)
     plt.yticks(fontsize=15)
+    axes.yaxis.label.set_size(20)
 
     ax.set_title('Abril - 2021', fontsize=18)
     ax.grid(True)

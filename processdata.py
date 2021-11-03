@@ -1,5 +1,17 @@
+#!/bin/python
+import sys
+import os
 import FPIprocess
 import  FPIDisplay
+5
+def main(args):
+    do_something(args[0])
+
+
+if __name__ == "__main__":
+    import sys
+    main(sys.argv[1:])
+
 # Specify which instrument and which date to process 152 181
 instr_name = 'minime90'
 # year = 2013

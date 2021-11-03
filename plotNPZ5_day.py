@@ -39,7 +39,6 @@ instr_name = 'minime90'
 """
 year = 2021
 
-
 def convert_timesIDL(time):
     year_fun = year
     month_fun = month
@@ -91,56 +90,57 @@ def open_npz(path_npz):
         direction = fpi_results['direction']
     return times, winds, temps, temps_e, direction, fpi_results
 
-    def get_winds(path_npz, direction, reference='laser'):
-        with np.load(path_npz, allow_pickle=True) as data:
-            FPI_Results = data['FPI_Results']
-            FPI_Results = FPI_Results.reshape(-1)[0]
-            ref_Dop, e_ref_Dop = FPI.DopplerReference(FPI_Results, reference=reference)
-            # Calculate the vertical wind and interpolate it
-            ind = FPI.all_indices('Zenith', FPI_Results['direction'])
-            w = (FPI_Results['LOSwind'][ind] - ref_Dop[ind])  # LOS is away from instrument
-            sigma_w = FPI_Results['sigma_LOSwind'][ind]
-            dt = []
-            for x in FPI_Results['sky_times'][ind]:
-                diff = (x - FPI_Results['sky_times'][0])
-                dt.append(diff.seconds + diff.days * 86400.)
-            dt = np.array(dt)
-    
-            # Remove outliers
-            ind = abs(w) < 200.
-    
-            if sum(ind) <= 1:
-                # No good data, just use all ind
-                ind = np.array([True for i in range(len(w))])  # There has to be a clearer way to do this...
-    
-            if len(ind) == 0:
-                raise Exception('%s: No Zenith look directions' % f)
-    
-            # Interpolate
-            w2 = interpolate.interp1d(dt[ind], w[ind], bounds_error=False, fill_value=0.0)
-            sigma_w2 = interpolate.interp1d(dt[ind], sigma_w[ind], bounds_error=False, fill_value=0.0)
-            dt = []
-            for x in FPI_Results['sky_times']:
-                diff = (x - FPI_Results['sky_times'][0])
-                dt.append(diff.seconds + diff.days * 86400.)
-            w = w2(dt)
-            sigma_w = sigma_w2(dt)
-            ind = FPI.all_indices(direction, FPI_Results['direction'])
-            if direction == 'Zenith':
-                print('Zeni')
-                Doppler_Wind = (FPI_Results['LOSwind'][ind] - ref_Dop[ind])
-                Doppler_Error = np.sqrt(FPI_Results['sigma_LOSwind'][ind] ** 2)
-            else:
-                Doppler_Wind = (FPI_Results['LOSwind'][ind] - ref_Dop[ind] - w[ind] * np.cos(
-                    FPI_Results['ze'][ind] * np.pi / 180.)) / \
-                               np.sin(FPI_Results['ze'][ind] * np.pi / 180.)
-                Doppler_Error = np.sqrt(FPI_Results['sigma_LOSwind'][ind] ** 2 + sigma_w[ind] ** 2)
-            if direction == 'West' or direction == 'South':
-                Doppler_Wind = -Doppler_Wind
-    
-            # Doppler_Wind = -Doppler_Wind
-    
-        return Doppler_Wind, Doppler_Error
+
+def get_winds(path_npz, direction, reference='laser'):
+    with np.load(path_npz, allow_pickle=True) as data:
+        FPI_Results = data['FPI_Results']
+        FPI_Results = FPI_Results.reshape(-1)[0]
+        ref_Dop, e_ref_Dop = FPI.DopplerReference(FPI_Results, reference=reference)
+        # Calculate the vertical wind and interpolate it
+        ind = FPI.all_indices('Zenith', FPI_Results['direction'])
+        w = (FPI_Results['LOSwind'][ind] - ref_Dop[ind])  # LOS is away from instrument
+        sigma_w = FPI_Results['sigma_LOSwind'][ind]
+        dt = []
+        for x in FPI_Results['sky_times'][ind]:
+            diff = (x - FPI_Results['sky_times'][0])
+            dt.append(diff.seconds + diff.days * 86400.)
+        dt = np.array(dt)
+
+        # Remove outliers
+        ind = abs(w) < 200.
+
+        if sum(ind) <= 1:
+            # No good data, just use all ind
+            ind = np.array([True for i in range(len(w))])  # There has to be a clearer way to do this...
+
+        if len(ind) == 0:
+            raise Exception('%s: No Zenith look directions' % f)
+
+        # Interpolate
+        w2 = interpolate.interp1d(dt[ind], w[ind], bounds_error=False, fill_value=0.0)
+        sigma_w2 = interpolate.interp1d(dt[ind], sigma_w[ind], bounds_error=False, fill_value=0.0)
+        dt = []
+        for x in FPI_Results['sky_times']:
+            diff = (x - FPI_Results['sky_times'][0])
+            dt.append(diff.seconds + diff.days * 86400.)
+        w = w2(dt)
+        sigma_w = sigma_w2(dt)
+        ind = FPI.all_indices(direction, FPI_Results['direction'])
+        if direction == 'Zenith':
+            print('Zeni')
+            Doppler_Wind = (FPI_Results['LOSwind'][ind] - ref_Dop[ind])
+            Doppler_Error = np.sqrt(FPI_Results['sigma_LOSwind'][ind] ** 2)
+        else:
+            Doppler_Wind = (FPI_Results['LOSwind'][ind] - ref_Dop[ind] - w[ind] * np.cos(
+                FPI_Results['ze'][ind] * np.pi / 180.)) / \
+                           np.sin(FPI_Results['ze'][ind] * np.pi / 180.)
+            Doppler_Error = np.sqrt(FPI_Results['sigma_LOSwind'][ind] ** 2 + sigma_w[ind] ** 2)
+        if direction == 'West' or direction == 'South':
+            Doppler_Wind = -Doppler_Wind
+
+        # Doppler_Wind = -Doppler_Wind
+
+    return Doppler_Wind, Doppler_Error
 
 
 def get_available_data(result_path, month):
@@ -186,8 +186,8 @@ def smothResults(dframePy, mode, kernel_size=3):
     return dframePy
 
 
-def plot_month_data_(result_path, mode, month, eliminate, times_min):
-    dates_available = get_available_data(result_path, month)
+def plot_month_data_(result_path, mode, month, eliminate, times_min, dates_available_var):
+    dates_available = dates_available_var
     for el in eliminate:
         try:
             dates_available.remove(el)
@@ -197,7 +197,7 @@ def plot_month_data_(result_path, mode, month, eliminate, times_min):
     first = True
     labels = ['temps', 'winds', 'sigma_winds', 'times']
     dataframes = []
-    directions = ['North', 'East', 'South', 'West']
+    directions = ['North', 'East', 'South', 'West', 'Zenith']
     times = [datetime(year, month, day) for day in dates_available]
     for direction in directions:
         for day in dates_available:
@@ -211,8 +211,8 @@ def plot_month_data_(result_path, mode, month, eliminate, times_min):
             dframePy = pd.DataFrame.from_dict(dPy)
             dframePy = preprocess_data_Py(dframePy)
             dframePy = dframePy[labels]
-            dframePy = dframePy[dframePy['temps'] > 1]
-            filterdata = smothResults(dframePy, mode, kernel_size=7)
+            dframePy = dframePy[dframePy['temps'] > 200]
+            filterdata = smothResults(dframePy, mode, kernel_size=9)
             # dia -> direcciones -> datos cada 5 min
             dataframes.append(filterdata)
 
@@ -243,17 +243,18 @@ def plot_month_data_(result_path, mode, month, eliminate, times_min):
         total = pd.concat([oeste_frame, este_frame, norte_frame, sur_frame])
 
         total_c, total_c_std = separated_times(times_min, total, mode)
-        # zenith_mean, zenith_std = separated_times(times_min, zenith_frame, mode)
+        zenith_mean, zenith_std = separated_times(times_min, zenith_frame, mode)
 
         return total_c, total_c_std
     else:
         zonal = pd.concat([oeste_frame, este_frame])
         meridional = pd.concat([norte_frame, sur_frame])
+        zenith_mean, zenith_std = separated_times(times_min, zenith_frame, mode)
 
         meridional_c, meridional_c_std = separated_times(times_min, meridional, mode)
         zonal_c, zonal_c_std = separated_times(times_min, zonal, mode)
 
-        return [meridional_c, meridional_c_std, zonal_c, zonal_c_std]
+        return [meridional_c, meridional_c_std, zonal_c, zonal_c_std, zenith_mean, zenith_std]
 
 
 def plot_day_data_(result_path, mode, month, day, directions, times_min):
@@ -303,10 +304,11 @@ def plot_day_data_(result_path, mode, month, day, directions, times_min):
             sigma = 'sigma_winds'
             zonal = pd.concat([oeste_frame, este_frame])
             meridional = pd.concat([norte_frame, sur_frame])
+            zenith = zenith_frame
 
             meridional_c, meridional_c_std = separated_times(times_min, meridional, mode)
             zonal_c, zonal_c_std = separated_times(times_min, zonal, mode)
-            # zenith_mean, zenith_std = separated_times(times_min, zenith_frame, mode)
+            zenith_mean, zenith_std = separated_times(times_min, zenith_frame, mode)
 
             return [meridional_c, zonal_c]
 
@@ -320,73 +322,74 @@ def ploteo_temps_test():
 # ax.set_ylim(-100, 150)
 
 if __name__ == '__main__':
-    month = 6
-    day = 18
-    fig = plt.figure(figsize=(2, 2))
 
-    ax1 = fig.add_subplot(2, 2, 1)
-    ax2 = fig.add_subplot(2, 2, 2)
-    ax3 = fig.add_subplot(2, 1, 2)
+    import pandas as pd
 
-    eliminate = [6, 7, 8, 15, 16, 17, 18, 19, 24, 25, 26]
-    # eliminate = []
+    df = pd.read_csv('vertical-winds-2021-09-22.txt', header = None)
+    print(df)
+    month = 9
+    day = 22
+    fig = plt.figure(figsize=(1, 1))
+
+    ax1 = fig.add_subplot(1, 1, 1)
+    # twin_axes = ax1.twinx()
+    # eliminate = [6, 7, 8, 15, 16, 17, 18, 19, 24, 25, 26]
+    eliminate = []
     modes = ['temps', 'winds']
     directions = ['North', 'East', 'South', 'West']
     result_path = "./results/"
     times_min = []
     for hour in [19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5]:
-        for minute in [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]:
+        for minute in [0, 30]:
             if 18 < hour:
-                times_min.append(datetime(year, month, 1, hour, minute))
+                times_min.append(datetime(year, month, 23, hour, minute))
             else:
-                times_min.append(datetime(year, month, 2, hour, minute))
+                times_min.append(datetime(year, month, 24, hour, minute))
 
-    dates_available = get_available_data(result_path, month)
-    size_axis = 10
-    size_title = 13
+    # dates_available = get_available_data(result_path, month)
+    dates_available = [22]
+    size_axis = 20
+    size_title = 20
 
-    for day in dates_available:
-        data_day_plot = plot_day_data_(result_path, modes[1], month, day, directions, times_min)
-        ax1.errorbar(times_min[:-1], range(len(times_min[:-1])), alpha=0.0)
-        ax1.scatter(times_min[:-1], data_day_plot[0], alpha=0.4, s=10, c='r')
-        ax1.set_xlabel('Hora local', fontsize=size_axis)
-        ax1.set_xticklabels([19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5], fontsize=size_axis)
-        ax1.set_ylim(-100, 100)
-        ax1.grid(True)
-        ax1.set_title('Vientos meridionales', fontsize=size_title)
-        ax1.set_ylabel('Vientos (m/s)', fontsize=size_axis)
+    data_month_plot = plot_month_data_(result_path, modes[1], month, eliminate, times_min, dates_available)
 
-        ax2.errorbar(times_min[:-1], range(len(times_min[:-1])), alpha=0.0)
-        ax2.scatter(times_min[:-1], data_day_plot[1], alpha=0.4, s=10, c='r')
-        ax2.set_xlabel('Hora local', fontsize=size_axis)
-        ax2.set_xticklabels([19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5], fontsize=size_axis)
-        ax2.set_ylim(-60, 150)
-        ax2.grid(True)
-        ax2.set_title('Vientos zonales', fontsize=size_title)
+    # ax1.errorbar(times_min[:-1], data_month_plot[0], data_month_plot[1],
+    #             fmt='--ro', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
 
-        ax3.errorbar(times_min[:-1], range(len(times_min[:-1])), alpha=0.0)
-        ax3.set_xlabel('Hora local', fontsize=size_axis)
-        ax3.set_xticklabels([19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5], fontsize=size_axis)
-        data_day_plot = plot_day_data_(result_path, modes[0], month, day, directions, times_min)
-        ax3.scatter(times_min[:-1], data_day_plot[0], alpha=0.4, s=10, c='r')
-
-    data_month_plot = plot_month_data_(result_path, modes[1], month, eliminate, times_min)
-
-    ax1.errorbar(times_min[:-1], data_month_plot[0], data_month_plot[1],
+    ax1.errorbar(times_min[:-1], data_month_plot[4], data_month_plot[5],
                  fmt='--ko', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
+    ax1.errorbar(df['datetime'], df['vz'], df['std_vz']/2,
+                 fmt='--go', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
+    # ax1.errorbar(times_min[:-1], list((np.array(range(len(times_min[:-1])))+1000)*-1000),
+    #             fmt='--go', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
 
-    ax2.errorbar(times_min[:-1], data_month_plot[2], data_month_plot[3],
-                 fmt='--ko', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
+    # data_month_plot = plot_month_data_(result_path, modes[0], month, eliminate, times_min, dates_available)
 
-    data_month_plot = plot_month_data_(result_path, modes[0], month, eliminate, times_min)
+    # twin_axes.errorbar(times_min[:-1], data_month_plot[0], data_month_plot[1],
+    #                   fmt='--go', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
 
-    ax3.errorbar(times_min[:-1], data_month_plot[0], data_month_plot[1],
-                 fmt='--ko', elinewidth=0.5, capthick=1, capsize=3, alpha=0.8)
-    ax3.set_ylim(400, 900)
-    ax3.grid(True)
-    ax3.set_ylabel('Temperaturas (K)', fontsize=size_axis)
+    ax1.set_xticklabels([19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5], fontsize=size_axis)
+    ax1.set_ylim(-200, 50)
+    # twin_axes.set_ylim(200, 800)
+    # twin_axes.set_ylabel("Temperatura (K)", fontsize=size_axis)
+    ax1.legend(['Vientos meridionales', 'Vientos zonales', 'Temperatura de la termosfera'])
+    ax1.legend(['Vientos verticales', 'Derivas zonales'],
+               loc=4,
+               prop={'size': size_title/2 + 8})
+    ax1.grid(True)
+    ax1.set_title('Vientos meridionales', fontsize=size_title)
+    ax1.set_ylabel('Velocidad (m/s)', fontsize=size_axis)
+    ax1.set_xlabel('Hora local', fontsize=size_axis)
+    ax1.set_title('Jicamarca - 22 ' + str(MONTHS[month-1]) +
+                  ' 2021', fontsize=size_title)
+    ax1.tick_params(axis='both', which='major', labelsize=size_axis)
+    # twin_axes.tick_params(axis='both', which='major', labelsize=size_axis)
+
+    manager = plt.get_current_fig_manager()
+    manager.full_screen_toggle()
+    fig.savefig('myimage.svg', format='svg', dpi=1200)
+    plt.savefig('figure.eps', format='eps')
+    plt.show()
 
     # plt.subplots_adjust(left=None, bottom=0.1, right=None, top=0.2, wspace=None, hspace=None)
     # plt.set_title(MONTHS[month-1] + '-' + str(year), fontsize=18
-    fig.subplots_adjust(hspace=.5)
-    plt.show()
